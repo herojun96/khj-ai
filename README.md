@@ -25,7 +25,7 @@ Adam optimizer가 너 좋은 성능을 보이므로 Adam사용
 
 
 
-
+"
  for i, data in enumerate(trainloader):
         inputs, labels = data
         inputs, labels = inputs.to(0), labels.to(0)
@@ -38,6 +38,7 @@ Adam optimizer가 너 좋은 성능을 보이므로 Adam사용
         _, predicted = torch.max(outputs.data, 1)
         temp += (predicted == labels).sum().item()
         total += inputs.shape[0]
+"
 train dateset을 통해서 모델을 훈련시키는 부분
 
 
@@ -45,7 +46,7 @@ train dateset을 통해서 모델을 훈련시키는 부분
 
 
 
-
+"
 correct = 0
 total = 0
 with torch.no_grad():
@@ -59,7 +60,7 @@ with torch.no_grad():
 
 print('test셋 결과물: %d %%' % (
     100 * correct / total))
-
+"
 test dataset을 통해서 정확도를 검사하는 부분
 
 
